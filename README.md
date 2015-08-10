@@ -1,4 +1,4 @@
-#Sinon demo
+#Sinon demo ![Build passing](https://travis-ci.org/syang019/sinon-demo.svg?branch=master)
 
 ###Purpose
 
