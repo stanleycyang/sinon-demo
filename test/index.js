@@ -30,11 +30,13 @@ describe('Replace existing method', function(){
 
 describe('Replace return', function(){
     describe('From Person.sayHi', function(){
+        // Stubbing
         it('says hola', sinon.test(function(){
            this.stub(Person, 'sayHi').returns('hola'); 
            expect(Person.sayHi('Stanley')).to.equal('hola');
         }));
 
+        // Stubbing since behaviors are replaced
         it('says bonjour', sinon.test(function(){
             this.stub(Person, 'sayHi').returns('bonjour');
             expect(Person.sayHi()).to.equal('bonjour');
@@ -44,6 +46,7 @@ describe('Replace return', function(){
 
 describe('Spy on existing method', function(){
     it('shall check argument', sinon.test(function(){
+      // Mocking since we are testing the expected behavior
       sinon.spy(Person, 'sayHi');
       var said = Person.sayHi('again'); 
 
